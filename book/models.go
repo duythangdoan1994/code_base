@@ -9,3 +9,7 @@ type Book struct {
 	Author string   `gorm:"column:author" json:"author"`
 	Category string `gorm:"column:category" json:"category"`
 }
+
+func (b *Book) TableName() string {
+	return "books"
+}

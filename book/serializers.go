@@ -4,10 +4,6 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
-func (b *Book) TableName() string {
-	return "books"
-}
-
 func InsertBook(db *gorm.DB, b *Book) (err error) {
 	if err = db.Save(b).Error; err != nil {
 		return err
